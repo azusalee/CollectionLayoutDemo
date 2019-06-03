@@ -1,14 +1,15 @@
 //
-//  CardCollectionViewFlowLayout.m
+//  SinCollectionViewFlowLayout.m
 //  CardCollect
 //
-//  Created by yangming on 2019/5/24.
+//  Created by yangming on 2019/6/3.
 //  Copyright © 2019 AL. All rights reserved.
 //
 
-#import "CardCollectionViewFlowLayout.h"
+#import "SinCollectionViewFlowLayout.h"
 
-@implementation CardCollectionViewFlowLayout
+@implementation SinCollectionViewFlowLayout
+
 
 
 - (instancetype)init{
@@ -50,7 +51,9 @@
 
         if (self.scrollDirection == UICollectionViewScrollDirectionHorizontal) {
             attrs.transform = CGAffineTransformTranslate(attrs.transform, -delta*(1-scale), 0);
+            attrs.transform = CGAffineTransformTranslate(attrs.transform, 0, -sin(M_PI_2*(2*delta/zoomFactory))*50);
         }
+        
         //设置显示优先级
         attrs.zIndex = scale*1000;
         
@@ -82,4 +85,5 @@
     
     return proposedContentOffset;
 }
+
 @end

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C393F1922A50EC700342D3C /* SinCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C393F1822A50EC700342D3C /* SinCollectionViewFlowLayout.m */; };
+		8C393F1C22A5153100342D3C /* CircleCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C393F1B22A5153100342D3C /* CircleCollectionViewLayout.m */; };
 		8C3B35A4229795B10070FE7E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C3B35A3229795B10070FE7E /* AppDelegate.m */; };
 		8C3B35A7229795B10070FE7E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C3B35A6229795B10070FE7E /* ViewController.m */; };
 		8C3B35AA229795B10070FE7E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C3B35A8229795B10070FE7E /* Main.storyboard */; };
@@ -19,6 +21,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8C393F1722A50EC700342D3C /* SinCollectionViewFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SinCollectionViewFlowLayout.h; sourceTree = "<group>"; };
+		8C393F1822A50EC700342D3C /* SinCollectionViewFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SinCollectionViewFlowLayout.m; sourceTree = "<group>"; };
+		8C393F1A22A5153100342D3C /* CircleCollectionViewLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CircleCollectionViewLayout.h; sourceTree = "<group>"; };
+		8C393F1B22A5153100342D3C /* CircleCollectionViewLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CircleCollectionViewLayout.m; sourceTree = "<group>"; };
 		8C3B359F229795B10070FE7E /* CardCollect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CardCollect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C3B35A2229795B10070FE7E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8C3B35A3229795B10070FE7E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -88,6 +94,10 @@
 			children = (
 				8C3B35B9229796090070FE7E /* CardCollectionViewFlowLayout.h */,
 				8C3B35BA229796090070FE7E /* CardCollectionViewFlowLayout.m */,
+				8C393F1722A50EC700342D3C /* SinCollectionViewFlowLayout.h */,
+				8C393F1822A50EC700342D3C /* SinCollectionViewFlowLayout.m */,
+				8C393F1A22A5153100342D3C /* CircleCollectionViewLayout.h */,
+				8C393F1B22A5153100342D3C /* CircleCollectionViewLayout.m */,
 			);
 			path = layout;
 			sourceTree = "<group>";
@@ -163,9 +173,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C393F1C22A5153100342D3C /* CircleCollectionViewLayout.m in Sources */,
 				8C3B35BB229796090070FE7E /* CardCollectionViewFlowLayout.m in Sources */,
 				8C3B35A7229795B10070FE7E /* ViewController.m in Sources */,
 				8C3B35B2229795B40070FE7E /* main.m in Sources */,
+				8C393F1922A50EC700342D3C /* SinCollectionViewFlowLayout.m in Sources */,
 				8C3B35BF22979B7E0070FE7E /* DemoCollectionViewCell.m in Sources */,
 				8C3B35A4229795B10070FE7E /* AppDelegate.m in Sources */,
 			);

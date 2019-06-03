@@ -9,11 +9,14 @@
 #import "ViewController.h"
 #import "CardCollectionViewFlowLayout.h"
 #import "DemoCollectionViewCell.h"
+#import "SinCollectionViewFlowLayout.h"
+#import "CircleCollectionViewLayout.h"
 
 @interface ViewController () <UICollectionViewDelegate, UICollectionViewDataSource>
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
 @property (nonatomic, strong) NSArray *dataArray;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *segControl;
 
 @end
 
@@ -22,16 +25,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    CGFloat screenWidth = UIScreen.mainScreen.bounds.size.width;
-    CardCollectionViewFlowLayout *layout = [[CardCollectionViewFlowLayout alloc] init];
-    CGFloat itemWidth = 130;
-    layout.itemSize = CGSizeMake(itemWidth, self.collectionView.bounds.size.height);
-    layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
-    layout.minimumInteritemSpacing = 0;
-    layout.minimumLineSpacing = 0;
-    layout.sectionInset = UIEdgeInsetsMake(0, (screenWidth-itemWidth)/2, 0, (screenWidth-itemWidth)/2);
     
-    self.collectionView.collectionViewLayout = layout;
+    [self changeLayout:self.segControl];
+//    CGFloat screenWidth = UIScreen.mainScreen.bounds.size.width;
+//    SinCollectionViewFlowLayout *layout = [[SinCollectionViewFlowLayout alloc] init];
+//    CGFloat itemWidth = 130;
+//    layout.itemSize = CGSizeMake(itemWidth, itemWidth);
+//    layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+//    layout.minimumInteritemSpacing = 0;
+//    layout.minimumLineSpacing = 0;
+//    layout.sectionInset = UIEdgeInsetsMake(120, (screenWidth-itemWidth)/2, 120, (screenWidth-itemWidth)/2);
+    
+    
+//    CircleCollectionViewLayout *layout = [[CircleCollectionViewLayout alloc] init];
+//    self.collectionView.collectionViewLayout = layout;
     
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
@@ -48,7 +55,8 @@
                         @{@"title":@"8"},
                         @{@"title":@"9"},
                         @{@"title":@"10"},
-                        @{@"title":@"11"},];
+                        @{@"title":@"11"},
+                        @{@"title":@"12"},];
     
 }
 
@@ -58,9 +66,40 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     DemoCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"DemoCollectionViewCell" forIndexPath:indexPath];
+    NSDictionary *dict = [self.dataArray objectAtIndex:indexPath.row];
+    NSString *title = dict[@"title"];
+    cell.nameLabel.text = title;
     
     return cell;
 }
 
+- (IBAction)changeLayout:(UISegmentedControl *)sender {
+    CGFloat screenWidth = UIScreen.mainScreen.bounds.size.width;
+    if (sender.selectedSegmentIndex == 0) {
+        CardCollectionViewFlowLayout *layout = [[CardCollectionViewFlowLayout alloc] init];
+        CGFloat itemWidth = 130;
+        layout.itemSize = CGSizeMake(itemWidth, itemWidth);
+        layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+        layout.minimumInteritemSpacing = 0;
+        layout.minimumLineSpacing = 0;
+        layout.sectionInset = UIEdgeInsetsMake(120, (screenWidth-itemWidth)/2, 120, (screenWidth-itemWidth)/2);
+        self.collectionView.collectionViewLayout = layout;
+        [self.collectionView reloadData];
+    }else if (sender.selectedSegmentIndex == 1){
+        SinCollectionViewFlowLayout *layout = [[SinCollectionViewFlowLayout alloc] init];
+        CGFloat itemWidth = 130;
+        layout.itemSize = CGSizeMake(itemWidth, itemWidth);
+        layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+        layout.minimumInteritemSpacing = 0;
+        layout.minimumLineSpacing = 0;
+        layout.sectionInset = UIEdgeInsetsMake(120, (screenWidth-itemWidth)/2, 120, (screenWidth-itemWidth)/2);
+        self.collectionView.collectionViewLayout = layout;
+        [self.collectionView reloadData];
+    }else if (sender.selectedSegmentIndex == 2){
+        CircleCollectionViewLayout *layout = [[CircleCollectionViewLayout alloc] init];
+        self.collectionView.collectionViewLayout = layout;
+        [self.collectionView reloadData];
+    }
+}
 
 @end
