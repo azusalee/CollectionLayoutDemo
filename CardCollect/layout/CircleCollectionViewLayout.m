@@ -73,13 +73,27 @@
     for (int i = 0; i < self.totalNum; i++) {
         UICollectionViewLayoutAttributes *attrs = [self layoutAttributesForItemAtIndexPath:[NSIndexPath indexPathForRow:i inSection:0]];
         attrs.size = self.itemSize;
-        CGFloat angle = -2*M_PI*attrs.indexPath.row/_totalNum+M_PI*2*self.collectionView.contentOffset.x/self.collectionView.bounds.size.width+M_PI_2;
+        
+        CGFloat offsetAngle = self.offsetAngle;
+        
+        CGFloat angle = -2*M_PI*attrs.indexPath.row/_totalNum+M_PI*2*self.collectionView.contentOffset.x/self.collectionView.bounds.size.width+offsetAngle;
         attrs.center = CGPointMake(self.center.x+self.radius*cos(angle)+self.collectionView.contentOffset.x, self.center.y + self.radius*sin(angle));
+        
+        // 根据角度变换大小
+        double scale = (self.maxScale-self.minScale)/2*sin(angle+M_PI_2-offsetAngle)+(self.maxScale+self.minScale)/2;
+        attrs.transform = CGAffineTransformMakeScale(scale, scale);
+        
         [attributes addObject:attrs];
     }
     
     return attributes;
     
+}
+
+// 获取当前中心的index
+- (NSInteger)circleCenterIndex{
+    double index = self.collectionView.contentOffset.x/(self.collectionView.bounds.size.width/self.totalNum)+self.totalNum;
+    return ((NSInteger)index)%self.totalNum;
 }
 
 //- (CGPoint)targetContentOffsetForProposedContentOffset:(CGPoint)proposedContentOffset{

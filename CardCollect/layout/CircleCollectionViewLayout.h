@@ -14,8 +14,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, assign) CGFloat minScale;
 @property (nonatomic, assign) CGFloat maxScale;
-
+@property (nonatomic, assign) CGFloat offsetAngle;
 @property (nonatomic, assign) CGSize itemSize; 
+
+// 获取当前中心的index
+- (NSInteger)circleCenterIndex;
 
 @end
 
