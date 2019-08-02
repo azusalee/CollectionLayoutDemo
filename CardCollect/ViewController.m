@@ -70,7 +70,7 @@
     NSDictionary *dict = [self.dataArray objectAtIndex:indexPath.row];
     NSString *title = dict[@"title"];
     cell.nameLabel.text = title;
-    
+    NSLog(@"测试2");
     return cell;
 }
 
