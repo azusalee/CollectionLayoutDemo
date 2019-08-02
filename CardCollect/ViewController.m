@@ -61,6 +61,16 @@
     NSLog(@"测试");
 }
 
+- (void)testCoverage{
+    int i = 1;
+    int j = i+2;
+    if (j > i) {
+        NSLog(@"j > i");
+    }else{
+        NSLog(@"j <= i");
+    }
+}
+
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
     return self.dataArray.count;
 }
