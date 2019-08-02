@@ -9,8 +9,16 @@
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
 
+#if CODECOVERAGE
+#import <Coverage/GCDAProfiling.h>
+#endif
+
 int main(int argc, char * argv[]) {
     @autoreleasepool {
+#if CODECOVERAGE
+        CODE_CCOVER_START
+#endif
+
         return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
     }
 }

@@ -57,7 +57,6 @@
                         @{@"title":@"10"},
                         @{@"title":@"11"},
                         @{@"title":@"12"},];
-    
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		780E32345BD62B0ED9E9803D /* Pods_CardCollect.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E607EA0546BF96D6CB2B1487 /* Pods_CardCollect.framework */; };
 		8C393F1922A50EC700342D3C /* SinCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C393F1822A50EC700342D3C /* SinCollectionViewFlowLayout.m */; };
 		8C393F1C22A5153100342D3C /* CircleCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C393F1B22A5153100342D3C /* CircleCollectionViewLayout.m */; };
 		8C3B35A4229795B10070FE7E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C3B35A3229795B10070FE7E /* AppDelegate.m */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		20BA968900CB430FD59D4B6F /* Pods-CardCollect.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardCollect.debug.xcconfig"; path = "Target Support Files/Pods-CardCollect/Pods-CardCollect.debug.xcconfig"; sourceTree = "<group>"; };
 		8C393F1722A50EC700342D3C /* SinCollectionViewFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SinCollectionViewFlowLayout.h; sourceTree = "<group>"; };
 		8C393F1822A50EC700342D3C /* SinCollectionViewFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SinCollectionViewFlowLayout.m; sourceTree = "<group>"; };
 		8C393F1A22A5153100342D3C /* CircleCollectionViewLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CircleCollectionViewLayout.h; sourceTree = "<group>"; };
@@ -40,6 +42,8 @@
 		8C3B35BC22979B7E0070FE7E /* DemoCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoCollectionViewCell.h; sourceTree = "<group>"; };
 		8C3B35BD22979B7E0070FE7E /* DemoCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoCollectionViewCell.m; sourceTree = "<group>"; };
 		8C3B35BE22979B7E0070FE7E /* DemoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DemoCollectionViewCell.xib; sourceTree = "<group>"; };
+		DE478C9BA62A79FC181E38F8 /* Pods-CardCollect.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardCollect.release.xcconfig"; path = "Target Support Files/Pods-CardCollect/Pods-CardCollect.release.xcconfig"; sourceTree = "<group>"; };
+		E607EA0546BF96D6CB2B1487 /* Pods_CardCollect.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CardCollect.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,17 +51,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				780E32345BD62B0ED9E9803D /* Pods_CardCollect.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		548E4DF62BE724FDED89C1C1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E607EA0546BF96D6CB2B1487 /* Pods_CardCollect.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8C3B3596229795B10070FE7E = {
 			isa = PBXGroup;
 			children = (
 				8C3B35A1229795B10070FE7E /* CardCollect */,
 				8C3B35A0229795B10070FE7E /* Products */,
+				FA482013DD5616886AB844E4 /* Pods */,
+				548E4DF62BE724FDED89C1C1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,6 +117,15 @@
 			path = layout;
 			sourceTree = "<group>";
 		};
+		FA482013DD5616886AB844E4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				20BA968900CB430FD59D4B6F /* Pods-CardCollect.debug.xcconfig */,
+				DE478C9BA62A79FC181E38F8 /* Pods-CardCollect.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -109,9 +133,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8C3B35B5229795B40070FE7E /* Build configuration list for PBXNativeTarget "CardCollect" */;
 			buildPhases = (
+				EA128666D927BB5C8058EDE8 /* [CP] Check Pods Manifest.lock */,
 				8C3B359B229795B10070FE7E /* Sources */,
 				8C3B359C229795B10070FE7E /* Frameworks */,
 				8C3B359D229795B10070FE7E /* Resources */,
+				2F14902120F52373569D9B92 /* [CP] Embed Pods Frameworks */,
+				8C4563DF22F3EC0A004A82D9 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -167,6 +194,70 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2F14902120F52373569D9B92 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CardCollect/Pods-CardCollect-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Coverage/Coverage.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Coverage.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CardCollect/Pods-CardCollect-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8C4563DF22F3EC0A004A82D9 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n./Coverage/exportenv.sh\n";
+		};
+		EA128666D927BB5C8058EDE8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CardCollect-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8C3B359B229795B10070FE7E /* Sources */ = {
@@ -256,7 +347,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -309,7 +400,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -319,10 +410,19 @@
 		};
 		8C3B35B6229795B40070FE7E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 20BA968900CB430FD59D4B6F /* Pods-CardCollect.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
+				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"CODECOVERAGE=1",
+					"$(inherited)",
+					"COCOAPODS=1",
+				);
 				INFOPLIST_FILE = CardCollect/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -335,10 +435,14 @@
 		};
 		8C3B35B7229795B40070FE7E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE478C9BA62A79FC181E38F8 /* Pods-CardCollect.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
+				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				INFOPLIST_FILE = CardCollect/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
