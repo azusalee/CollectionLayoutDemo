@@ -106,6 +106,33 @@
     }
 }
 
+- (IBAction)testButtonDidTap:(id)sender {
+    [self testCoverage6];
+}
+
+- (void)testCoverage6{
+    static int i = 0;
+    if (i == 0) {
+        NSLog(@"state 0");
+    }else if (i == 1) {
+        NSLog(@"state 1");
+    }else if (i == 2) {
+        NSLog(@"state 2");
+    }else if (i == 3) {
+        NSLog(@"state 3");
+    }else if (i == 4) {
+        NSLog(@"state 4");
+    }else if (i == 5) {
+        NSLog(@"state 5");
+    }else if (i == 6) {
+        NSLog(@"state 6");
+    }else if (i == 10) {
+        NSLog(@"state 10");
+    }else if (i == 10) {
+        NSLog(@"state %d", i);
+    }
+}
+
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
     return self.dataArray.count;
 }

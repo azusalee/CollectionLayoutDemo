@@ -55,15 +55,24 @@
                                     <action selector="changeLayout:" destination="BYZ-38-t0r" eventType="valueChanged" id="sHw-tX-Ejn"/>
                                 </connections>
                             </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aAO-3l-CYH">
+                                <rect key="frame" x="318" y="801" width="62" height="30"/>
+                                <state key="normal" title="测试代码"/>
+                                <connections>
+                                    <action selector="testButtonDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Z1g-FN-ABJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="GVB-ST-wmf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="115" id="18T-Y0-67s"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eNj-PJ-Y8b" secondAttribute="trailing" constant="20" id="PxZ-Q2-y5u"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aAO-3l-CYH" secondAttribute="trailing" constant="34" id="TuJ-S7-nFB"/>
                             <constraint firstItem="eNj-PJ-Y8b" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="YXn-Zh-Mem"/>
                             <constraint firstItem="GVB-ST-wmf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ZND-wX-fKE"/>
                             <constraint firstItem="eNj-PJ-Y8b" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="adm-Ob-6u1"/>
                             <constraint firstItem="GVB-ST-wmf" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="xLD-ek-HLx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="aAO-3l-CYH" secondAttribute="bottom" constant="31" id="xUh-lh-7tk"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
