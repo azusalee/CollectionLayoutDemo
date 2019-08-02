@@ -64,6 +64,7 @@
     [self testCoverage2];
     [self testCoverage3];
     [self testCoverage4];
+    [self testCoverage5];
 }
 
 - (void)testCoverage{
