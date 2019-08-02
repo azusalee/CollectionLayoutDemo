@@ -20,9 +20,9 @@ int main(int argc, char * argv[]) {
         
         NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
         NSString *documentsDirectory = [[paths objectAtIndex:0] stringByAppendingPathComponent:@"gcda_files"];
-        NSFileManager *fileManager = [NSFileManager defaultManager];
-        if (![fileManager fileExistsAtPath:documentsDirectory]) [fileManager createDirectoryAtPath:documentsDirectory withIntermediateDirectories:YES attributes:nil error:nil];
-        NSLog(@"%@", documentsDirectory);\
+//        NSFileManager *fileManager = [NSFileManager defaultManager];
+//        if (![fileManager fileExistsAtPath:documentsDirectory]) [fileManager createDirectoryAtPath:documentsDirectory withIntermediateDirectories:YES attributes:nil error:nil];
+        NSLog(@"%@", documentsDirectory);
         setenv("GCOV_PREFIX", [documentsDirectory cStringUsingEncoding:NSUTF8StringEncoding], 1);
         setenv("GCOV_PREFIX_STRIP", "14", 1);
         dispatch_source_t timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, dispatch_get_global_queue(0, 0));
