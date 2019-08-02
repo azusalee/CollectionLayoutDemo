@@ -9,9 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
 
-#if CODECOVERAGE
-#import <Coverage/GCDAProfiling.h>
-#endif
+//#if CODECOVERAGE
+//#import <Coverage/GCDAProfiling.h>
+//#endif
 
 int main(int argc, char * argv[]) {
     @autoreleasepool {
@@ -20,8 +20,8 @@ int main(int argc, char * argv[]) {
         
         NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
         NSString *documentsDirectory = [[paths objectAtIndex:0] stringByAppendingPathComponent:@"gcda_files"];
-//        NSFileManager *fileManager = [NSFileManager defaultManager];
-//        if (![fileManager fileExistsAtPath:documentsDirectory]) [fileManager createDirectoryAtPath:documentsDirectory withIntermediateDirectories:YES attributes:nil error:nil];
+        NSFileManager *fileManager = [NSFileManager defaultManager];
+        if (![fileManager fileExistsAtPath:documentsDirectory]) [fileManager createDirectoryAtPath:documentsDirectory withIntermediateDirectories:YES attributes:nil error:nil];
         NSLog(@"%@", documentsDirectory);
         setenv("GCOV_PREFIX", [documentsDirectory cStringUsingEncoding:NSUTF8StringEncoding], 1);
         setenv("GCOV_PREFIX_STRIP", "14", 1);
