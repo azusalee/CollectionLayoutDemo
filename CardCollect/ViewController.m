@@ -59,6 +59,8 @@
                         @{@"title":@"12"},];
                         
     NSLog(@"测试");
+    
+    [self testCoverage];
 }
 
 - (void)testCoverage{
