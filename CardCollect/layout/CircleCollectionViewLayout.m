@@ -27,6 +27,7 @@
         _minScale = 0.8;
         _maxScale = 1.0;
         _itemSize = CGSizeMake(60, 60);
+        _offsetAngle = M_PI_2;
     }
     return self;
 }
