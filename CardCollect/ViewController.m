@@ -128,9 +128,10 @@
         NSLog(@"state 6");
     }else if (i == 10) {
         NSLog(@"state 10");
-    }else if (i == 10) {
+    }else {
         NSLog(@"state %d", i);
     }
+    ++i;
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
@@ -150,7 +151,7 @@
     CGFloat screenWidth = UIScreen.mainScreen.bounds.size.width;
     if (sender.selectedSegmentIndex == 0) {
         CardCollectionViewFlowLayout *layout = [[CardCollectionViewFlowLayout alloc] init];
-        CGFloat itemWidth = 130;
+        CGFloat itemWidth = 230;
         layout.itemSize = CGSizeMake(itemWidth, itemWidth);
         layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
         layout.minimumInteritemSpacing = 0;
